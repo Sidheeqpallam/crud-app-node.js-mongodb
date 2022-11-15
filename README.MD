@@ -6,7 +6,7 @@ It contain saving api only.
 You can test this api following these steps
 
 1. Download the code into your local
-2. Make sure you installed and config the node.js
+2. Make sure you installed and config the node package manager
 3. Create .env file
 4. Create these variables and provide the correct datas
 
