@@ -11,8 +11,11 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/", require("./routes/events"));
+app.use("/api", require("./routes/events"));
 
+app.use("*", (req, res) => {
+  res.status(404).send("Bad Requiest. ");
+});
 mongoose
   .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
@@ -24,4 +27,5 @@ mongoose
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
+  else console.log(`Server is running on port: ${PORT}`);
 });
