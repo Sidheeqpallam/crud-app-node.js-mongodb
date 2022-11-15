@@ -2,7 +2,7 @@
 
 machine test for eventneedz
 
-It contain saving api only.
+It contain event creating api only.
 You can test this api following these steps
 
 1. Download the code into your local
